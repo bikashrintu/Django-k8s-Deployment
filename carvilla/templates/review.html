@@ -1,0 +1,418 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!--font-family-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
+
+    <!-- title of site -->
+    <title>CarVilla Contact</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="{% static 'assets/logo/favicon.png' %}" />
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+
+    <!--linear icon css-->
+    <link rel="stylesheet" href="{% static 'assets/css/linearicons.css' %}">
+
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+
+    <!--owl.carousel.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}">
+
+    <!--style.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+
+    <!-- FONTAWESOME -->
+    <!-- Latest Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- FONTAWESOME -->
+    <!-- Latest Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+
+        }
+
+        .containers {
+            max-width: 100%;
+            padding: 100px 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background: url('{% static "./assets/images/featured-cars/b5.jpg" %}') no-repeat center center/cover;
+        }
+
+        .contact-card,
+        .location-card {
+            width: 48%;
+            /* background: rgba(255, 255, 255, 0.6); */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-card input,
+        .contact-card textarea,
+        .contact-card button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-card button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-card button:hover {
+            background: #0056b3;
+        }
+
+        .location-card p {
+            margin: 10px 0;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+
+        .location-card h2 {
+            margin: 10px 0;
+            color: whitesmoke;
+            font-size: 26px;
+        }
+
+        .text-center {
+            color: whitesmoke;
+        }
+
+        @media (max-width: 768px) {
+            .containers {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-card,
+            .location-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* REVIEW-FORM */
+        .container-review {
+            max-width: 100%;
+            max-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 100px 10px;
+            background: url('{% static "./assets/images/featured-cars/m6.jpg" %}') no-repeat center center/cover;
+        }
+
+        .review-card {
+            width: 100%;
+            max-width: 600px;
+            /* background: rgba(255, 255, 255, 0.6); */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;
+        }
+
+        .review-card input,
+        .review-card textarea,
+        .review-card button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .review-card button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .review-card button:hover {
+            background: #0056b3;
+        }
+
+        .home:hover {
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--welcome-hero start -->
+
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70"
+        data-minus-value-mobile="55" data-speed="1000" style="background-color: black;">
+
+        <div class="container">
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">carvilla<span></span></a>
+
+            </div><!--/.navbar-header-->
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="home"><a href="{% url 'home' %}" style="color: white; ">home</a></li>
+                    <li class=""><a href="{% url 'home' %}#service">service</a></li>
+                    <li class=""><a href="{% url 'home' %}#new-cars">new cars</a></li>
+                    <li class=""><a href="{% url 'home' %}#featured-cars">featured cars</a></li>
+                    <li class=""><a href="{% url 'home' %}#brand">brands</a></li>
+                    <li class=""><a href="{% url 'review' %}" style="color: blue;">contact</a></li>
+                </ul><!--/.nav -->
+            </div><!-- /.navbar-collapse -->
+        </div><!--/.container-->
+    </nav><!--/nav-->
+    <!-- End Navigation -->
+
+
+    <!-- REVIEW SECTION -->
+    <!-- REVIEW SECTION -->
+    <div class="container-review">
+        <div class="review-card">
+            <h2>Leave a Review</h2>
+            <form method="post" enctype="multipart/form-data"> <!-- Add enctype -->
+                {% csrf_token %}
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                </div>
+                <div>
+                    <label for="review">Message</label>
+                    <textarea id="review" name="review" placeholder="Message" required></textarea>
+                </div>
+                <div>
+                    <label for="image">Upload Your Image</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- CONTACT-FORM -->
+    <div class="containers">
+        <div class="contact-card">
+            <h2 class="text-center">Contact Us</h2>
+            <form action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="c1069595-7ae2-4078-a735-38272e2c7499">
+                
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="tel" placeholder="Mobile Number" name="mobile_number" required>
+                
+                <textarea placeholder="Message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            
+        </div>
+        <div class="location-card">
+            <h2>Get in Touch</h2>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Kozhikode:</strong> 4 Square Building, near Star Care
+                Hospital, Kerala 673017</p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Kannur:</strong> Near Deshabhimani, Kerala 670004</p>
+            <p><i class="fa-solid fa-phone"></i> +91 8089010183</p>
+            <p><i class="fa-solid fa-envelope"></i> carvilla@gmail.com</p>
+        </div>
+    </div>
+
+
+
+
+    <!--contact start-->
+    <footer id="contact" class="contact">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html">Carvilla</a>
+                            </div>
+                            <p>
+                                At Carvilla, we are committed to providing the best automotive services, from purchasing
+                                to after-sales support. We strive for excellence and customer satisfaction at every
+                                step.
+                            </p>
+                            <!-- <div class="footer-contact">
+									<p>info@themesine.com</p>
+									<p>+1 (885) 2563154554</p>
+								</div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h2>About Carvilla</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Terms <span>of Service</span></a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12">
+                        <div class="single-footer-widget">
+                            <h2>Top Brands</h2>
+                            <div class="row">
+                                <div class="col-md-7 col-xs-6">
+                                    <ul>
+                                        <li><a href="#">BMW</a></li>
+                                        <li><a href="#">Lamborghini</a></li>
+                                        <li><a href="#">Camaro</a></li>
+                                        <li><a href="#">Audi</a></li>
+                                        <li><a href="#">Infiniti</a></li>
+                                        <li><a href="#">Nissan</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5 col-xs-6">
+                                    <ul>
+                                        <li><a href="#">Ferrari</a></li>
+                                        <li><a href="#">Porsche</a></li>
+                                        <li><a href="#">Land Rover</a></li>
+                                        <li><a href="#">Aston Martin</a></li>
+                                        <li><a href="#">Mercedes</a></li>
+                                        <li><a href="#">Opel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h2>Newsletter</h2>
+                            <div class="footer-newsletter">
+                                <p>
+                                    Subscribe to get the latest news, updates, and information.
+                                </p>
+                            </div>
+                            <div class="hm-foot-email">
+                                <div class="foot-email-box">
+                                    <input type="text" class="form-control" placeholder="Add Email">
+                                </div><!--/.foot-email-box-->
+                                <div class="foot-email-subscribe">
+                                    <span><i class="fa fa-arrow-right"></i></span>
+                                </div><!--/.foot-email-icon-->
+                            </div><!--/.hm-foot-email-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>
+                            &copy; copyright. Designed and developed by <a href="https://www.themesine.com/">Vinay</a>.
+                        </p><!--/p-->
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.footer-copyright-->
+        </div><!--/.container-->
+
+        <div id="scroll-Top">
+            <div class="return-to-top">
+                <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title=""
+                    data-original-title="Back to Top" aria-hidden="true"></i>
+            </div>
+
+        </div><!--/.scroll-Top-->
+    </footer><!--/.contact-->
+
+    <!--contact end-->
+
+    <!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!--bootstrap.min.js-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- bootsnav js -->
+    <script src="{% static 'assets/js/bootsnav.js' %}"></script>
+
+    <!--owl.carousel.js-->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!--Custom JS-->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+
+</body>
+
+</html>
